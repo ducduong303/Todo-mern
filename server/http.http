@@ -1,0 +1,63 @@
+### Register
+POST  http://localhost:8500/api/users/register
+Content-Type: application/json
+
+{
+    "username":"ducduong",
+    "email":"duccon@gmail.com",
+    "password":"123456"
+}
+
+### Login
+
+POST  http://localhost:8500/api/users/login
+Content-Type: application/json
+
+{
+    "email":"duccon@gmail.com",
+    "password":"123456"
+}
+
+### Verify Token
+
+GET http://localhost:8500/api/users/verify
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTM2ZjYzMGIxZmMwMWJkMGFlZmI1YiIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTMzMjc2MSwiZXhwIjoxNjIxNDE5MTYxfQ.JokW0cxYIVlARRhrq4kOL2Y7XziXdv1zH1p4CiC9ohQ
+
+
+### Get Notes
+
+GET http://localhost:8500/api/notes?page=1&limit=3
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTM2ZjYzMGIxZmMwMWJkMGFlZmI1YiIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTMyNTkxMCwiZXhwIjoxNjIxNDEyMzEwfQ.ozDI3Q1_VetkEX6VSMe8PJTkm3fi3Gz1wvYJqX1XSBw
+
+### Create Note
+POST http://localhost:8500/api/notes
+Content-Type: application/json
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTM2ZjYzMGIxZmMwMWJkMGFlZmI1YiIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTMyMzk2MCwiZXhwIjoxNjIxNDEwMzYwfQ.DcK_NuB7tVJW7xeeJ1cEWY0pRgkHcITq_pX1f-aw22M
+
+{
+    "title":"Chào ngày mới 76",
+    "desc":"đạt nhiều thành công"
+}
+
+### Delete Note
+
+DELETE  http://localhost:8500/api/notes/60a231617960031404528ab0
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTIzMTYxNzk2MDAzMTQwNDUyOGFiMCIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTI2NDEzMSwiZXhwIjoxNjIxMzUwNTMxfQ.AHnLomwpjD5P5-D7MMAVtcucNdHZHT0GQGt9zIMFKIg
+
+### Update Note
+
+PUT http://localhost:8500/api/notes/60a2908ec9488d2a2889783b
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTIzMTYxNzk2MDAzMTQwNDUyOGFiMCIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTI2NDEzMSwiZXhwIjoxNjIxMzUwNTMxfQ.AHnLomwpjD5P5-D7MMAVtcucNdHZHT0GQGt9zIMFKIg
+
+{
+    "title":"chào update",
+    "desc":"lời chào thân thiệt update"
+}
+
+
+### Get a Note
+
+GET http://localhost:8500/api/notes/60a2908ec9488d2a2889783b
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYTIzMTYxNzk2MDAzMTQwNDUyOGFiMCIsIm5hbWUiOiJkdWNkdW9uZyIsImlhdCI6MTYyMTI2NDEzMSwiZXhwIjoxNjIxMzUwNTMxfQ.AHnLomwpjD5P5-D7MMAVtcucNdHZHT0GQGt9zIMFKIg
